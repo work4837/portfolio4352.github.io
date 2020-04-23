@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.min.css"/><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Блог</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo"> <a class="logo__link" href="index.html"><img class="logo__img" src="media/img/logo.png"/></a></div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item"><a class="menu__list-link" href="index.html">Главная</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="about.html">О нас</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="service.html">Услуги</a></li>
+              <li class="menu__list-item menu__list-item--dropdown">
+                <div class="menu__list-link menu__list-dropdown">Портфолио</div>
+                <ul class="menu__dropdown">
+                  <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="portfolio.html">Пункт 1</a></li>
+                  <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="portfolio.html">Пункт 2</a></li>
+                  <li class="menu__dropdown-item"><a class="menu__dropdown-link" href="portfolio.html">Пункт 3</a></li>
+                </ul>
+              </li>
+              <li class="menu__list-item"><a class="menu__list-link" href="blog.html">Блог</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="#">Особенности</a></li>
+              <li class="menu__list-item"><a class="menu__list-link" href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="btn-close">
+              <div class="btn-close__line btn-close__line--1"></div>
+              <div class="btn-close__line btn-close__line--2"></div>
+            </div>
+          </nav>
+          <div class="menu__btns">
+            <div class="menu__list-item menu__search-item"><a class="menu__list-link menu__list-search" href="#"><img class="menu__list-img" src="media/img/icons/search.png"/></a>
+              <div class="menu__search" id="search">
+                <input class="menu__search-input" placeholder="Что ищем?"/>
+              </div>
+            </div>
+            <div class="menu-btn"> 
+              <div class="menu-btn__line line--1"></div>
+              <div class="menu-btn__line line--2"></div>
+              <div class="menu-btn__line line--3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="nesting">
+      <div class="container">
+        <div class="nesting__inner">
+          <div class="nesting__title">Блог</div>
+          <div class="nesting__path">Блог</div>
+        </div>
+      </div>
+    </section>
+    <section class="blog"> 
+      <div class="container"> 
+        <div class="blog__inner">
+          <div class="blog__posts">
+            <div class="post">
+              <div class="post__info"> 
+                <div class="post__date">May<span class="post__number">26</span></div>
+                <div class="post__type"><img class="post__type-img" src="media/img/icons/"/></div>
+              </div>
+              <div class="post__content"> 
+                <div class="post__media"> 
+                  <!-- Image--><img class="post__img" src="media/img/icons/34434"/>
+                  <!-- Slider-->
+                  <!-- Video-->
+                  <!-- Audio-->
+                </div>
+                <div class="post__title">Заголовок</div>
+                <div class="post__descr">
+                  <div class="post__author">Posted by <span>John Doe</span><span>in</span><span>Wordpress</span></div>
+                  <div class="post__caregory"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__caregory-text">Веб-разработка</div>
+                  </div>
+                  <div class="post__comments"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__comments-text">12</div>
+                  </div>
+                </div>
+                <div class="post__text">Pellentesque in mi massa. Suspendisse volutpat purus a quam viverra, at blandit tortor luctus. Nunc ac sapien sit amet leo iaculis consectetur sed in arcu. Proin iaculis erat at orci sollicitudin, ut porta massa sollicitudin. In vulputate lectus id leo porta, et venenatis ante pretium. Donec euismod odio nec commodo dignissim. Pellentesque dolor lorem, facilisis id augue sit amet, lacinia mollis tortor. Praesent in consectetur quam, a vehicula diam.</div>
+                <div class="post__btn"><a class="post__btn-link">Продолжить читать</a></div>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post__info"> 
+                <div class="post__date">May<span class="post__number">26</span></div>
+                <div class="post__type"><img class="post__type-img" src="media/img/icons/media/img/icons/image.png"/></div>
+              </div>
+              <div class="post__content"> 
+                <div class="post__media"> 
+                  <!-- Image-->
+                  <!-- Slider-->
+                  <div class="post__slider-wrapper">
+                    <div class="post__slider">
+                      <div class="post__slider-item"><img class="post__slider-img" src="mediaimg/photos/src"/></div>
+                      <div class="post__slider-item"><img class="post__slider-img" src="media/img/photos/src"/></div>
+                      <div class="post__slider-item"><img class="post__slider-img" src="media/img/photos/src"/></div>
+                    </div>
+                  </div>
+                  <!-- Video-->
+                  <!-- Audio-->
+                </div>
+                <div class="post__title">Заголовок</div>
+                <div class="post__descr">
+                  <div class="post__author">Posted by <span>John Doe</span><span>in</span><span>Wordpress</span></div>
+                  <div class="post__caregory"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__caregory-text">Веб-разработка</div>
+                  </div>
+                  <div class="post__comments"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__comments-text"></div>
+                  </div>
+                </div>
+                <div class="post__text"></div>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post__info"> 
+                <div class="post__date">May<span class="post__number">26</span></div>
+                <div class="post__type"><img class="post__type-img" src="media/img/icons/media/img/icons/"/></div>
+              </div>
+              <div class="post__content"> 
+                <div class="post__media"> 
+                  <!-- Image-->
+                  <!-- Slider-->
+                  <!-- Video-->
+                  <!-- youtube iframe-->
+                  <iframe class="video" src="https://www.youtube.com/embed/ojApvvDfOfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                  <!-- Audio-->
+                </div>
+                <div class="post__title">Заголовок</div>
+                <div class="post__descr">
+                  <div class="post__author">Posted by <span>John Doe</span><span>in</span><span>Wordpress</span></div>
+                  <div class="post__caregory"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__caregory-text">Веб-разработка</div>
+                  </div>
+                  <div class="post__comments"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__comments-text"></div>
+                  </div>
+                </div>
+                <div class="post__text"></div>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post__info"> 
+                <div class="post__date">May<span class="post__number">26</span></div>
+                <div class="post__type"><img class="post__type-img" src="media/img/icons/media/img/icons/quote.png"/></div>
+              </div>
+              <div class="post__content"> 
+                <div class="post__title">Заголовок</div>
+                <div class="post__descr">
+                  <div class="post__author">Posted by <span>John Doe</span><span>in</span><span>Wordpress</span></div>
+                  <div class="post__caregory"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__caregory-text">Веб-разработка</div>
+                  </div>
+                  <div class="post__comments"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__comments-text"></div>
+                  </div>
+                </div>
+                <div class="post__quote">Maecenas odio lacus, pulvinar a congue id, dapibus id eros. Fusce ut volutpat magna. Etiam ultricies justo ligula. Ut dignissim convallis mauris, eu iaculis justo efficitur sit amet. Curabitur varius scelerisque tristique. Donec pretium elit sed malesuada venenatis. Nullam eget posuere eros. Sed magna sem, pellentesque quis aliquet eget, lobortis vitae sapien. Cras in tempus nisi. Cras mattis vitae neque vitae dictum. Nam fringilla felis at ante molestie tempor. Cras sit amet tempus est. Nunc tincidunt nisl eu facilisis volutpat. Mauris placerat aliquam erat, rhoncus fermentum nibh aliquet id. Curabitur varius orci quis purus tempor convallis.</div>
+              </div>
+            </div>
+            <div class="post">
+              <div class="post__info"> 
+                <div class="post__date">May<span class="post__number">26</span></div>
+                <div class="post__type"><img class="post__type-img" src="media/img/icons/media/img/icons/audio.png"/></div>
+              </div>
+              <div class="post__content"> 
+                <div class="post__media"> 
+                  <!-- Image-->
+                  <!-- Slider-->
+                  <!-- Video-->
+                  <!-- Audio-->
+                  <audio class="audio-player" controls="controls">
+                    <source src="media/audio/Eminem-Godzilla_(feat._Juice_WRLD)_(MP3TON.INFO).mp3"/>
+                  </audio>
+                </div>
+                <div class="post__title">Заголовок</div>
+                <div class="post__descr">
+                  <div class="post__author">Posted by <span>John Doe</span><span>in</span><span>Wordpress</span></div>
+                  <div class="post__caregory"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__caregory-text">Веб-разработка</div>
+                  </div>
+                  <div class="post__comments"><img class="post__descr-img" src="media/img/icons/"/>
+                    <div class="post__comments-text"></div>
+                  </div>
+                </div>
+                <div class="post__text"></div>
+              </div>
+            </div>
+            <div class="blog__pagination" id="pagination"></div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar__categories">
+              <div class="subtitle-uppercase subtitle">Категории</div>
+              <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item"><a class="sidebar__list-link" href="#">Дизайн логотипов</a></li>
+                  <li class="sidebar__list-item"><a class="sidebar__list-link" href="#">Веб-дизайн</a></li>
+                  <li class="sidebar__list-item"><a class="sidebar__list-link" href="#">Фотосъемка</a></li>
+                  <li class="sidebar__list-item"><a class="sidebar__list-link" href="#">Wordpress</a></li>
+                  <li class="sidebar__list-item"><a class="sidebar__list-link" href="#">Иконки</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="sidebar__recent-posts">
+              <div class="sidebar__recent-title subtitle">Последние посты</div>
+              <div class="sidebar__post"> <a class="sidebar__post-link" href="#">Curabitur vitae velit</a>
+                <div class="sidebar__post-date">25 May 2013</div>
+              </div>
+              <div class="sidebar__post"> <a class="sidebar__post-link" href="#">Curabitur vitae velit</a>
+                <div class="sidebar__post-date">25 May 2013</div>
+              </div>
+              <div class="sidebar__post"><a class="sidebar__post-link" href="#">Curabitur vitae velit</a>
+                <div class="sidebar__post-date">25 May 2013</div>
+              </div>
+              <div class="sidebar__post"><a class="sidebar__post-link" href="#">Curabitur vitae velit</a>
+                <div class="sidebar__post-date">25 May 2013</div>
+              </div>
+            </div>
+            <div class="sidebar__tags">
+              <div class="sidebar__tags-title subtitle">Тэги</div>
+              <div class="tag__wrapper">
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+                <div class="tag"> <a class="tag__link" href="#">Maecenas </a></div>
+              </div>
+            </div>
+            <div class="sidebar__archive">
+              <div class="sidebar__archive-title subtitle">Архив</div>
+              <ul class="sidebar__archive">
+                <li class="sidebar__archive-item"><a class="sidebar__archive-link" href="#">2019</a></li>
+                <li class="sidebar__archive-item"><a class="sidebar__archive-link" href="#">2018</a></li>
+                <li class="sidebar__archive-item"><a class="sidebar__archive-link" href="#">2017</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <div class="logo footer__logo"> <img class="logo__img" src="media/img/logo.png"/></div>
+            <p class="footer__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec .</p>
+            <div class="footer__content-phone">Телефон: <span>182 2569 5896</span></div>
+            <div class="footer__content-email">e-mail: <span>info@modu.versus</span></div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__col-title">Компания</div>
+            <ul class="footer__menu"> 
+              <li class="footer__menu-item"><a class="footer__menu-link" href="about.html">О нас </a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">FAQ</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="contact.html">Контакты</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Условия</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Политика конфиденциальности</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__col-title">Общество</div>
+            <ul class="footer__menu">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="blog.html">Блог</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Форум</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Поддержка</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Новостная рассылка</a></li>
+            </ul>
+          </div>
+          <div class="footer__blog">
+            <div class="footer__blog-title">из <span>БЛОГА</span> </div>
+            <div class="footer__blog-post">
+              <div class="footer__blog-inner">
+                <div class="footer__blog-images"><img class="footer__blog-img"/></div>
+                <div class="footer__blog-info">
+                  <p class="footer__blog-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <div class="footer__blog-date">26 May, 2020</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__blog-post">
+              <div class="footer__blog-inner">
+                <div class="footer__blog-images"><img class="footer__blog-img"/></div>
+                <div class="footer__blog-info">
+                  <p class="footer__blog-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <div class="footer__blog-date">26 May, 2020</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__rights">
+        <div class="container">
+          <div class="footer__rights-inner">
+            <div class="footer__rights-year">2020  ModusVersus</div>
+            <div class="footer__rights-social">
+              <ul class="social-list"> 
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="media/img/icons/social-ico1.png" alt=""/></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="media/img/icons/social-ico2.png" alt=""/></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="media/img/icons/social-ico3.png" alt=""/></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#"><img class="social-list__img" src="media/img/icons/social-ico4.png" alt=""/></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
