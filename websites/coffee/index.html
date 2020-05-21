@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <title>Coffee Production</title>
+  </head>
+
+  <body>
+    
+    <!-- Фиксированное меню слева -->
+    <div class="progress-bar">
+      <ul class="progress-bar__items">
+        <li class="progress-bar__item">
+          <a href="#home" class="progress-bar__link" indicator-data="home">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="progress-bar__item">
+          <a href="#coffee" class="progress-bar__link" indicator-data="coffee">Кофе</a>
+        </li>
+        <li class="progress-bar__item">
+          <a href="#history" class="progress-bar__link" indicator-data="history">История</a>
+        </li>
+        <li class="progress-bar__item">
+          <a href="#menu" class="progress-bar__link" indicator-data="menu">Меню</a>
+        </li>
+        <li class="progress-bar__item">
+          <a href="#gallery" class="progress-bar__link" indicator-data="gallery">Галерея</a>
+        </li>
+      </ul>
+    </div>
+
+    <header class="header section" id="home">
+      <div class="container">
+      <nav class="header__menu">
+        <div class="header__logo logo">
+          <a href="#home" class="logo__link" link-data="home"><img src="img/header-logo.png" alt="logo" class="logo__img"></a>
+        </div>
+        <div class="header__menu-btn">
+          <span></span>
+        </div>
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a href="#coffee" class="header__menu-link" link-data="coffee">Наше кофе</a></li>
+          <li class="header__menu-item"><a href="#history" class="header__menu-link" link-data="history">История кофе</a></li>
+          <li class="header__menu-item"><a href="#menu" class="header__menu-link" link-data="menu">Наше меню</a></li>
+          <li class="header__menu-item"><a href="#gallery" class="header__menu-link" link-data="gallery">Галерея</a></li>
+        </ul>
+      </nav>
+      <div class="header__content">
+        <div class="header__img-wrapper">
+          <img src="img/photo/coffee.png" alt="cup of coffee" class="header__img">
+          <span>coffee</span>
+        </div>
+        <div class="header__title">Ты любишь пить кофе по утрам?</div>
+        <p class="header__text text">С него начинают утро две трети жителей Земли. Кофе – величайший путешественник всех времен и народов. В Европе кофе известен всего 300 лет, на самом же деле — он отметил свой тысячелетний юбилей.
+        </p>
+        <div class="header__btn-wrapper">
+          <button class="header__btn btn">
+            Мы заботимся о нашем кофе
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      </div>
+      <div class="header__visit">
+        <button class="header__visit-btn">
+          <i class="fas fa-mug-hot"></i>
+          Посети нас
+        </button>
+        <p class="header__visit-text">Сегодня мы открыты с <span>8 утра</span>  :)</p>
+      </div>
+    </header>
+
+    <section class="coffee section" id="coffee">
+      <div class="container">
+        <div class="coffee__wrapper">
+          <div class="coffee__title title">
+            <div class="title__head">Наше кофе</div>
+          </div>
+          <div class="coffee__content">
+            <div class="subtitle">Ты ищешь кофе высшего сорта?</div>
+            <p class="text">Наша компания предоставляет только высшее качество кофе на рынке. Кофе, которое мы изготовляем употребляют известные личности в СНГ и за рубежом. Можете быть уверены, что покупая наш продукт вы получаете лучшее.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ethic section" id="history">
+      <div class="container">
+        <div class="ethic__wrapper">
+          <div class="ethic__title title">
+            <div class="title__head">Исторические источники</div>
+          </div>
+          <div class="ethic__content">
+              <div class="subtitle">Потому что это важно</div>
+              <p class="ethic__text text">Современная история кофе: сегодня производство кофе — гигантская отрасль, в работе которой заняты свыше 20 миллионов человек по всему миру. Этот ценный товар занимает второе место после нефти на международных рыночных торгах. С учётом того, что ежегодно употребляется более 400 миллиардов чашек кофе, это — самый популярный напиток во всём мире. В одной только Бразилии около пяти миллионов человек занимаются выращиванием и сбором урожая с более чем трех миллиардов кофейных деревьев.</p>
+          </div>
+          <!-- Фон -->
+          <div class="coffee-bean">
+            <img src="img/background/coffee-bean.png" alt="coffee bean" class="coffee-bean__img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section" id="menu">
+
+      <section class="food">
+        <div class="food__wrapper">
+          <div class="food__item" style="background-image: url(img/photo/food1.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Закуски</div>
+              <p class="food__item-descr text">В нашем меню есть 30 видов различных закусок. Выбирайте что пожелаете!</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+          <div class="food__item" style="background-image: url(img/photo/food2.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Горячие блюда</div>
+              <p class="food__item-descr text">Хотите хорошо поесть? У нас есть чем накормить вас: жаренный цыпленок..</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+          <div class="food__item" style="background-image: url(img/photo/food3.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Делиться</div>
+              <p class="food__item-descr text">Едите не сами и хотите иметь возможность поделиться. Вам сюда.</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+          <div class="food__item" style="background-image: url(img/photo/food4.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Напитки</div>
+              <p class="food__item-descr text">Более 50 видов различных напитков: кофе, вода, соки..</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+          <div class="food__item" style="background-image: url(img/photo/food5.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Для детей</div>
+              <p class="food__item-descr text">Полезная и безопасная пища для вашего ребенка.</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+          <div class="food__item" style="background-image: url(img/photo/food6.jpg);">
+            <div class="food__item-wrapper">
+              <div class="food__item-title">Торты</div>
+              <p class="food__item-descr text">Насладитесь уникальными тортами.</p>
+              <button class="food__item-btn btn-transparent">
+                <i class="fas fa-utensils"></i>
+                <span>Посмотреть</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bites">
+        <div class="container">
+          <div class="bites__wrapper">
+            <div class="bites__column">
+              <div class="bites__title title">
+                <div class="title__head">Закуски</div>
+              </div>
+              <div class="bites__subtitle subtitle">Идеальный перекус</div>
+            </div>
+            <div class="bites__menu">
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Вкусный бутерброд</div>
+                  <p class="bites__item-descr">Быстрый и простой в приготовлении вариант для завтрака!</p>
+                  <div class="bites__item-price">&#8372; 15</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Специальный салат с ветчиной</div>
+                  <p class="bites__item-descr">Салат с ветчиной, огурцом, яйцом и сыром.</p>
+                  <div class="bites__item-price">&#8372; 20</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Свинина на обжаренной булочке</div>
+                  <p class="bites__item-descr">Достойная альтернатива всенародно любимому шашлыку, не оставит мужчин равнодушными!</p>
+                  <div class="bites__item-price">&#8372; 30</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Яйца "Бенедикт"</div>
+                  <p class="bites__item-descr">Бутерброд из поджаренного тоста или булочки с яйцами-пашот, беконом или ветчиной и голландским соусом.</p>
+                  <div class="bites__item-price">&#8372; 15</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Яйца с ветчиной</div>
+                  <p class="bites__item-descr">Вкусное блюдо из яиц с ветчиной и майонезом.</p>
+                  <div class="bites__item-price">&#8372; 25</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Свежий рыбный салат</div>
+                  <p class="bites__item-descr">Это салат с рыбными консервами.</p>
+                  <div class="bites__item-price">&#8372; 20</div>
+                </div>
+              </div>
+              <div class="bites__menu-column">
+                <div class="bites__menu-item">
+                  <div class="bites__item-name">Хумус с лепёшками</div>
+                  <p class="bites__item-descr">Паштет с кремообразной текстурой из нута, турецкого гороха.</p>
+                  <div class="bites__item-price">&#8372; 35</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bites__btn-wrapper">
+            <button class="bites__btn btn">
+              <i class="fas fa-utensils"></i>
+              <span>Заказать сейчас</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="gallery__slider">
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+          <div class="gallery__slider-item">
+            <img src="img/photo/slider.jpg" alt="" class="gallery__slider-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact__wrapper">
+          <div class="contact__content">
+            <div class="contact__title title__head">Контакты</div>
+            <div class="contact__columns">
+              <div class="contact__info-column">
+                <div class="contact__subtitle subtitle">Не будьте чужим</div>
+                <div class="contact__adress">
+                  <div class="contact__adress-line1">Адрес</div>
+                  <div class="contact__adress-line2">Адрес</div>
+                  <div class="contact__adress-city">Город</div>
+                  <div class="contact__adress-area">Территория</div>
+                  <div class="contact__adress-postcode">Индекс почты</div>
+                </div>
+              </div>
+              <div class="contact__info-column">
+                <div class="contact__subtitle subtitle">Связаться с нами</div>
+                <div class="contact__social">
+                  <div class="contact__solial-item contact__social-tel"><i class="fas fa-comment-dots"></i> Контактный телефон: +380697456</div>
+                  <div class="contact__solial-item contact__social-website"><i class="fas fa-comment-dots"></i> coffee.com</div>
+                  <div class="contact__solial-item contact__social-email"><i class="fas fa-comment-dots"></i> email@coffee.com</div>
+                </div>
+              </div>
+          </div>
+          <div class="contact__btn-wrapper">
+            <button class="contact__btn btn-transparent">
+              <i class="fas fa-envelope"></i>
+              <span>Написать нам</span>
+            </button>
+          </div>
+          </div>
+          <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9401.510329023504!2d-0.177429!3d53.907266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cf066a308037e5a!2sHornsea%20Mere%20Caf%C3%A9%20%26%20Boating!5e0!3m2!1sru!2sua!4v1589552890570!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup Форма -->
+    <div class="popup">
+        <div class="popup__form">
+          <div class="popup__title subtitle">Оформление заказа</div>
+          <form class="form">
+            <div class="form__inner">
+              <div class="form__input-wrapper">
+                <label class="form__label">Имя:</label>
+                <input type="text" class="form__input" placeholder="Введите ваше имя..">
+              </div>
+              <div class="form__input-wrapper">
+                <label class="form__label">Телефон:</label>
+                <input type="text" class="form__input" placeholder="Введите ваш мобильный телефон..">
+              </div>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label">Адрес:</label>
+              <input type="text" class="form__input" placeholder="Введите адрес..">
+            </div>
+            <div class="form__textarea-wrapper">
+              <label class="form__label">Сообщение:</label>
+              <textarea class="form__textarea" placeholder="Напишите ваше сообщение.."></textarea>
+            </div>
+          </form>
+          <div class="popup__close"></div>
+          <div class="popup__btn-wrapper">  
+            <button class="popup__btn btn">Отправить</button>
+          </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__column">
+            <div class="footer__logo logo">
+              <a href="#home" class="logo__link" link-data="home"><img class="logo__img" alt="logo" src="img/footer-logo.png"></img></a>
+            </div>
+            <div class="footer__copy">Все права защищены. 2019-2020</div>
+          </div>
+          <div class="footer__column">
+            <button class="footer__visit-btn">
+              <i class="fas fa-coffee"></i>
+              Посетить нас
+            </button>
+            <ul class="footer__social">
+              <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a></li>
+              <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
+              <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i> </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Скролл вверх -->
+    <div class="scrolltop">
+      <button class="scrolltop-btn">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
