@@ -25,17 +25,17 @@ $(function() {
 
     $('#dropdown').on('click', function() {
         if($(window).width() <= 768) {
-            let id = $(this).val(),
+            let id = $(this).attr('drop-data'),
             active = 1;
     
             $('.hidden').slideToggle('slow');
     
             if(id == 0) {
                 $(this).text('Свернуть отзывы');
-                $(this).val(active);
+                $(this).attr('drop-data', active);
             } else {
                 $(this).text('Читать ещё отзывы');
-                $(this).val(0);
+                $(this).val('drop-data', 0);
             }
         }
     });
