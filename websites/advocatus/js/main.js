@@ -42,7 +42,7 @@ $(function() {
     // Табы 
     $('.question__tabs-item').on('click', function() {
         // 1. Получаем значение data-атрибута 
-        let tabId = $(this).attr('data');
+        let tabId = $(this).attr('data-tab');
 
         // 2. Находим все элементы .question__tabs-item и удаляем класс active, is-rotated
         $('.question__tabs-item.active').removeClass('active');
