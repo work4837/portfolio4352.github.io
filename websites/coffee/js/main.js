@@ -93,12 +93,12 @@ $(function() {
     }
 
     function highlightIndicator(id) {
-        let indicatorItems = $('.progress-bar__link');
+        let indicatorItems = $('.progress-bar__item');
 
         for (let i = 0; i < indicatorItems.length; i++) {
             if ($(indicatorItems[i]).attr('indicator-data') === id) {
                 $('.progress-bar__items').find('.progress-bar__link.active').removeClass('active');
-                $(indicatorItems[i]).addClass('active');   
+                $(indicatorItems[i]).find('.progress-bar__link').addClass('active');   
             } 
         }
     }
@@ -175,7 +175,7 @@ $(function() {
         }
     }
 
-    // popup формв
+    // popup форма
     $('.contact__btn').on('click', function() {
         $('body').addClass('popup-active');
         $('.popup').addClass('active');

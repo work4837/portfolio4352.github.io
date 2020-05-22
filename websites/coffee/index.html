@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,22 +13,22 @@
     <!-- Фиксированное меню слева -->
     <div class="progress-bar">
       <ul class="progress-bar__items">
-        <li class="progress-bar__item">
-          <a href="#home" class="progress-bar__link" indicator-data="home">
+        <li class="progress-bar__item" indicator-data="home">
+          <a href="#home" class="progress-bar__link">
             <i class="fas fa-home"></i>
           </a>
         </li>
-        <li class="progress-bar__item">
-          <a href="#coffee" class="progress-bar__link" indicator-data="coffee">Кофе</a>
+        <li class="progress-bar__item" indicator-data="coffee">
+          <a href="#coffee" class="progress-bar__link">Кофе</a>
         </li>
-        <li class="progress-bar__item">
-          <a href="#history" class="progress-bar__link" indicator-data="history">История</a>
+        <li class="progress-bar__item" indicator-data="history">
+          <a href="#history" class="progress-bar__link">История</a>
         </li>
-        <li class="progress-bar__item">
-          <a href="#menu" class="progress-bar__link" indicator-data="menu">Меню</a>
+        <li class="progress-bar__item" indicator-data="menu">
+          <a href="#menu" class="progress-bar__link">Меню</a>
         </li>
-        <li class="progress-bar__item">
-          <a href="#gallery" class="progress-bar__link" indicator-data="gallery">Галерея</a>
+        <li class="progress-bar__item" indicator-data="gallery">
+          <a href="#gallery" class="progress-bar__link" >Галерея</a>
         </li>
       </ul>
     </div>
@@ -37,16 +37,16 @@
       <div class="container">
       <nav class="header__menu">
         <div class="header__logo logo">
-          <a href="#home" class="logo__link" link-data="home"><img src="img/header-logo.png" alt="logo" class="logo__img"></a>
+          <a href="#home" class="logo__link"><img src="img/header-logo.png" alt="logo" class="logo__img"></a>
         </div>
         <div class="header__menu-btn">
           <span></span>
         </div>
         <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="#coffee" class="header__menu-link" link-data="coffee">Наше кофе</a></li>
-          <li class="header__menu-item"><a href="#history" class="header__menu-link" link-data="history">История кофе</a></li>
-          <li class="header__menu-item"><a href="#menu" class="header__menu-link" link-data="menu">Наше меню</a></li>
-          <li class="header__menu-item"><a href="#gallery" class="header__menu-link" link-data="gallery">Галерея</a></li>
+          <li class="header__menu-item"><a href="#coffee" class="header__menu-link">Наше кофе</a></li>
+          <li class="header__menu-item"><a href="#history" class="header__menu-link">История кофе</a></li>
+          <li class="header__menu-item"><a href="#menu" class="header__menu-link">Наше меню</a></li>
+          <li class="header__menu-item"><a href="#gallery" class="header__menu-link">Галерея</a></li>
         </ul>
       </nav>
       <div class="header__content">
@@ -78,7 +78,7 @@
       <div class="container">
         <div class="coffee__wrapper">
           <div class="coffee__title title">
-            <div class="title__head">Наше кофе</div>
+            <h2 class="title__head">Наше кофе</h2>
           </div>
           <div class="coffee__content">
             <div class="subtitle">Ты ищешь кофе высшего сорта?</div>
@@ -92,7 +92,7 @@
       <div class="container">
         <div class="history__wrapper">
           <div class="history__title title">
-            <div class="title__head">Исторические источники</div>
+            <h2 class="title__head">Исторические источники</h2>
           </div>
           <div class="history__content">
               <div class="subtitle">Потому что это важно</div>
@@ -108,7 +108,7 @@
 
     <div class="section" id="menu">
 
-      <section class="food">
+      <div class="food">
         <div class="food__wrapper">
           <div class="food__item" style="background-image: url(img/photo/food1.webp);">
             <div class="food__item-wrapper">
@@ -171,14 +171,14 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section class="bites">
         <div class="container">
           <div class="bites__wrapper">
             <div class="bites__column">
               <div class="bites__title title">
-                <div class="title__head">Закуски</div>
+                <h2 class="title__head">Закуски</h2>
               </div>
               <div class="bites__subtitle subtitle">Идеальный перекус</div>
             </div>
@@ -245,7 +245,7 @@
 
     </div>
 
-    <section class="gallery section" id="gallery">
+    <div class="gallery section" id="gallery">
       <div class="container">
         <div class="gallery__slider">
           <div class="gallery__slider-item">
@@ -268,13 +268,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="contact">
       <div class="container">
         <div class="contact__wrapper">
           <div class="contact__content">
-            <div class="contact__title title__head">Контакты</div>
+            <h2 class="contact__title title__head">Контакты</h2>
             <div class="contact__columns">
               <div class="contact__info-column">
                 <div class="contact__subtitle subtitle">Не будьте чужим</div>
@@ -303,7 +303,7 @@
           </div>
           </div>
           <div class="contact__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9401.510329023504!2d-0.177429!3d53.907266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cf066a308037e5a!2sHornsea%20Mere%20Caf%C3%A9%20%26%20Boating!5e0!3m2!1sru!2sua!4v1589552890570!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe class="contact__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9401.510329023504!2d-0.177429!3d53.907266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cf066a308037e5a!2sHornsea%20Mere%20Caf%C3%A9%20%26%20Boating!5e0!3m2!1sru!2sua!4v1589552890570!5m2!1sru!2sua"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </div>
@@ -345,7 +345,7 @@
         <div class="footer__wrapper">
           <div class="footer__column">
             <div class="footer__logo logo">
-              <a href="#home" class="logo__link" link-data="home"><img class="logo__img" alt="logo" src="img/footer-logo.png"></img></a>
+              <a href="#home" class="logo__link"><img class="logo__img" alt="logo" src="img/footer-logo.png"></a>
             </div>
             <div class="footer__copy">Все права защищены. 2019-2020</div>
           </div>
