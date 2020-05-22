@@ -23,19 +23,19 @@ $(function() {
       $(this).toggleClass('active');
     });
 
-    $('#dropdown').on('click', function() {
+    $('.dropdown').on('click', function() {
         if($(window).width() <= 768) {
-            let id = $(this).attr('drop-data'),
+            let id = $(this).val(),
             active = 1;
     
             $('.hidden').slideToggle('slow');
     
             if(id == 0) {
                 $(this).text('Свернуть отзывы');
-                $(this).attr('drop-data', active);
+                $(this).val(active);
             } else {
                 $(this).text('Читать ещё отзывы');
-                $(this).val('drop-data', 0);
+                $(this).val(0);
             }
         }
     });
