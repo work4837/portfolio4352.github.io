@@ -186,6 +186,9 @@ $(function() {
         $('body').removeClass('popup-active');
     });
 
+    // WOW.JS инициализация
+    new WOW().init();
+
 });
 
 
