@@ -159,9 +159,13 @@ $(function() {
             }, 500);
         });
     }
-    // появление, исчезновение 
+     
     $(window).on('scroll', function() {
+        // появление, исчезновение
         scrollTopAnimate();
+        
+        // Подгрузка Google Карты
+        loadGoogleMap();
     });
     scrollTopAnimate();
 
@@ -188,6 +192,17 @@ $(function() {
 
     // WOW.JS инициализация
     new WOW().init();
+
+    // Подгрузка Google Карты
+    function loadGoogleMap() {
+        if ($(window).scrollTop() > ($(document).height() / 2)) {
+            if ($('.contact__google-map').attr('src') === '') {
+                let googleMapLink = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9401.510329023504!2d-0.177429!3d53.907266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cf066a308037e5a!2sHornsea%20Mere%20Caf%C3%A9%20%26%20Boating!5e0!3m2!1sru!2sua!4v1589552890570!5m2!1sru!2sua';
+
+                $('.contact__google-map').attr('src', googleMapLink);
+            }
+        }
+    }
 
 });
 
