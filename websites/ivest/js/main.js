@@ -48,7 +48,7 @@ $(function() {
         } else {
             height = 100 - elementHeight;
         }
-        $(neededElement).css({height: height + 'vh'});
+        $(neededElement).css({'min-height': height + 'vh'});
     }
 
     // Слайдеры
