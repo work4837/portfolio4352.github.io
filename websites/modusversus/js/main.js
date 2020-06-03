@@ -104,11 +104,11 @@ $(function () {
         $('body').toggleClass('disabled');
     });
 
-    if ($(window).width() < 1020) {
-        $('.menu__list-item--dropdown').on('click', function() {
+    $('.menu__list-item--dropdown').on('click', function() {
+        if ($(window).width() < 1020) {
             $('.menu__dropdown').slideToggle();
-        });
-    }
+        }
+    });
 
     $(document).on('click', function(event){
         let clickElement = $(event.target).attr('class');
