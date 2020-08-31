@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+}
+    
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+    
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+}
+   
+a {
+    text-decoration: none;
+}
+    
+input,
+textarea {
+    width: 100%;
+    display: block;
+}
+  
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    
+}
