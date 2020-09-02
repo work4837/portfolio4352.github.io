@@ -16,6 +16,14 @@ $(function() {
                 }
             },
             {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    swipe: true,
+                    dots: true
+                }
+            },
+            {
                 breakpoint: 650,
                 settings: {
                     slidesToShow: 1,
@@ -33,6 +41,23 @@ $(function() {
                     centerMode: true,
                     centerPadding: '25px',
                     dots: true
+                }
+            }
+        ]
+    });
+
+    $('.after__slider').slick({
+        fade: true,
+        swipe: false,
+        prevArrow: '<div class="tap-area left-area"></div>',
+        nextArrow: '<div class="tap-area right-area"></div>',
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    swipe: true,
+                    prevArrow: '<div class="after__arrow-left"><img src="../img/icons/arrow-left.png"></div>',
+                    nextArrow: '<div class="after__arrow-right"><img src="../img/icons/arrow-right.png"></div>',
                 }
             }
         ]
