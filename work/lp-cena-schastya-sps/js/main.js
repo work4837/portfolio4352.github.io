@@ -1,6 +1,10 @@
 $(function() {
     $('.hapiness__bg').lettering();
 
+     /* **********************************************************************************************************
+    Слайдеры
+    ********************************************************************************************************** */
+
     $('.situations__slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -79,7 +83,10 @@ $(function() {
     //     swipe: false 
     // });
 
-    // Реализация тестов 
+    
+    /* **********************************************************************************************************
+    Реализация тестов 
+    ********************************************************************************************************** */
     var progressBar, questionNumber, returnBack, answerNo, answerYes, testNumber, testCounter, testResult;
 
     progressBar = $('.test__progress-bar');
@@ -128,6 +135,10 @@ $(function() {
     }
 
     function updateProgressBar(testNumber) {
+        if (testCounter === testNumber) {
+            progressBar.addClass('end');
+        }
+
         var progressAllWidth = $('.test__progress').width();
         var progressBarWidth = (progressAllWidth / testNumber) * testCounter;
         progressBar.width(progressBarWidth);
@@ -170,4 +181,6 @@ $(function() {
         updateProgressBar(testNumber);
         nextQuestion(testCounter);
     }
+
+    new WOW().init();
 });
