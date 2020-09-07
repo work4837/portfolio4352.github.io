@@ -116,7 +116,7 @@ $(function() {
     /* **********************************************************************************************************
     Реализация тестов 
     ********************************************************************************************************** */
-    var progressBar, questionNumber, returnBack, answerNo, answerYes, testNumber, testCounter, testResult;
+    var progressBar, questionNumber, returnBack, answerNo, answerYes, testNumber, testCounter, testResult, answers;
 
     progressBar = $('.test__progress-bar');
     questionNumber = $('.test__question-number');
@@ -126,17 +126,20 @@ $(function() {
     testNumber = $('.test__question').length;
     testCounter = 1;
     testResult = 0;
+    answers = [];
 
     initTests();
  
     answerYes.on('click', function() {
-        testResult++;
+        testResult += 1;
         
         if (testCounter < testNumber) {
             makeStep();
         } else {
             showResults();
         }
+
+        answers.push(true);
     });
 
     answerNo.on('click', function() {
@@ -145,6 +148,8 @@ $(function() {
         } else {
             showResults();
         }
+
+        answers.push(false);
     });
 
     comeBack.on('click', function() {
@@ -207,6 +212,12 @@ $(function() {
         if (testCounter >= 2) {
             prevQuestion(testCounter);  
             testCounter--;
+            
+            if (answers[testCounter - 1] === true) {
+                testResult--; 
+            }
+
+            answers.splice(-1, 1);
             questionNumber.html(testCounter);
             updateProgressBar(testNumber);
         }
