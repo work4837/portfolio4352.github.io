@@ -8,30 +8,53 @@
   </head>
 
   <body>
-    <div class="popup main-popup">
-      <div class="popup__content main-popup__wrapper">
-        <div class="popup__exit"></div>
-        <div class="main-popup__title">Выберите тариф:</div>
-        <div class="main-popup__btns">
-          <div class="main-popup__btn active">Standart</div>
-          <div class="main-popup__btn">VIP</div>
-          <div class="main-popup__btn">Super VIP</div>
-          <div class="main-popup__btn">Premium</div>
-        </div>
-        <form action="" class="main-popup__form">
-          <input type="text" class="main-popup__input input" placeholder="Ваше имя">
-          <input type="text" class="main-popup__input input" placeholder="Номер телефона">
-          <input type="text" class="main-popup__input input" placeholder="Ваш email">
-          <div class="main-popup__form-btn">
-            <div class="btn-wrapper">
-              <button class="btn">
-                Забронировать <span>спецпредложение</span> 
-              </button>
-              <span class="btn-bg"></span>
-            </div>
+    <div class="popups">
+      <div class="popup main-popup">
+        <div class="popup__content main-popup__wrapper">
+          <div class="popup__exit"></div>
+          <div class="popup__title main-popup__title">Выберите тариф:</div>
+          <div class="main-popup__btns">
+            <div class="main-popup__btn active">Standart</div>
+            <div class="main-popup__btn">VIP</div>
+            <div class="main-popup__btn">Super VIP</div>
+            <div class="main-popup__btn">Premium</div>
           </div>
-        </form>
-        <div class="main-popup__rights rights-text">Нажимая на кнопку, я даю согласие на обработку данных и принимаю политику конфиденциальности</div>
+          <form action="" class="main-popup__form">
+            <input type="text" class="main-popup__input input" placeholder="Ваше имя">
+            <input type="text" class="main-popup__input input" placeholder="Номер телефона">
+            <input type="text" class="main-popup__input input" placeholder="Ваш email">
+            <div class="main-popup__form-btn">
+              <div class="btn-wrapper">
+                <button class="btn">
+                  Забронировать <span>спецпредложение</span> 
+                </button>
+                <span class="btn-bg"></span>
+              </div>
+            </div>
+          </form>
+          <div class="main-popup__rights rights-text">Нажимая на кнопку, я даю согласие на обработку данных и принимаю <a class="test__rights-link" href="https://pavelrakov.com/confidentiality.pdf">политику конфиденциальности</a></div>
+        </div>
+      </div>
+      <div class="popup question-popup">
+        <div class="popup__content question-popup__content">
+          <div class="popup__exit"></div>
+          <div class="popup__title question-popup__title">Оставьте свои контакты</div>
+          <div class="popup__subtitle question-popup__subtitle">Мы сами перезвоним вам и расскажем о программе</div>
+          <form action="" class="main-popup__form">
+            <input type="text" class="main-popup__input input" placeholder="Введите ваше имя">
+            <input type="text" class="main-popup__input input" placeholder="Ваш email">
+            <input type="text" class="main-popup__input input" placeholder="Введите ваш телефон">
+            <div class="main-popup__form-btn">
+              <div class="btn-wrapper">
+                <button class="btn">
+                  Заказать консультацию
+                </button>
+                <span class="btn-bg"></span>
+              </div>
+            </div>
+          </form>
+          <div class="question-popup__rights rights-text">Нажимая на кнопку, я даю согласие на обработку данных и принимаю <a class="test__rights-link" href="https://pavelrakov.com/confidentiality.pdf">политику конфиденциальности</a></div>
+        </div>
       </div>
     </div>
 
@@ -53,7 +76,7 @@
           <div class="contact">
             <p class="contact__text">Бесплатно по России</p>
             <a href="tel:8(800)333-77-80" class="contact__tel">8 (800) 333-77-80</a>
-            <div class="contact__link">Задать вопрос</div>
+            <a href="" class="contact__link">Задать вопрос</a>
           </div>
         </nav>
         <div class="header__content">
@@ -351,21 +374,27 @@
                 <div class="test__progress-bar"></div>
               </div>
 
-              <div class="test__question text-big active" id="question-1">Чувствуете себя уверенной женщиной, способной достигать поставленных целей?</div>
+              <div class="test__question text-big active" id="question-1">Вы уверенно знакомитесь с молодыми людьми, знаете, как вскружить голову любому?</div>
+              <div class="test__question text-big" id="question-2">Мужчины часто делают вам комплименты, дарят подарки?</div>
+              <div class="test__question text-big" id="question-3">Чувствуете себя уверенной женщиной, способной достигать поставленных целей?</div>
+              <div class="test__question text-big" id="question-4">Как думаете, умеете ли вы мотивировать мужчину?</div>
+              <div class="test__question text-big" id="question-5">Согласны с мнением, что женщина служит целям мужчины?
+              </div>
+              
 
               <div class="test__btns">
                 <div class="test__btn btn-yes" id="yes">
                   <div class="test__btn-wrapper">
                     <img src="img/icons/like-pink.png" alt="" class="test__btn-img test__btn-img--1">
                     <img src="img/icons/like-white.png" alt="" class="test__btn-img test__btn-img--2">
-                    <p class="test__btn-text">Да</p>
+                    <p class="test__btn-text" id="yes-text">Да</p>
                   </div>
                 </div>
                 <div class="test__btn btn-no" id="no">
                   <div class="test__btn-wrapper">
                     <img src="img/icons/like-pink.png" alt="" class="test__btn-img test__btn-img--1">
                     <img src="img/icons/like-white.png" alt="" class="test__btn-img test__btn-img--2">
-                    <p class="test__btn-text">Нет</p>
+                    <p class="test__btn-text" id="no-text">Нет</p>
                   </div>
                 </div>
               </div>
@@ -391,7 +420,7 @@
                 <div class="test__final-result">
                   Ваш результат: <span class="pink" id="test-result">0-1 балл</span>
                 </div>
-                <p class="test__final-text text"> Вам сложно влиять на мужчин и получать от них желаемое. Вы не чувствуете себя расслабленной рядом с ними, держите дистанцию. Поэтому мужчины боятся подойти к вам или подарить подарок. Вам нужно развивать природные качества: нежность, мягкость, женственность.</p>
+                <p class="test__final-text text" id="test-result-text"></p>
                 <p class="test__final-advice pink">Вам подойдут программы и мастер-классы по развитию женственности и навыков влияния на мужчин. Вы в правильном месте!</p>
               </div>
             </div>
@@ -626,44 +655,74 @@
               <div class="author__chanel-item">
                 <img src="img/icons/chanel2.png" alt="">
                 <div class="author__chanel-info">
-                  <div class="author__chanel-text">«Пусть говорят» на Первом канале</div>
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
                 </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel3.png" alt="">
                 <div class="author__chanel-info">
-                  <div class="author__chanel-text">«Пусть говорят» на Первом канале</div>
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
                 </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel4.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel5.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel6.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Авторская передача «Такому Мама не научит»</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel7.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel8.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel9.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel10.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel11.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel12.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel13.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
+                </div>
               </div>
               <div class="author__chanel-item">
                 и др.
@@ -682,17 +741,20 @@
               <div class="author__chanel-item">
                 <img src="img/icons/chanel13.png" alt="">
                 <div class="author__chanel-info">
-                  <div class="author__chanel-text">«Пусть говорят» на Первом канале</div>
+                  <div class="author__chanel-text">Приглашенный эксперт в передачи</div>
                 </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel14.png" alt="">
                 <div class="author__chanel-info">
-                  <div class="author__chanel-text">«Пусть говорят» на Первом канале</div>
+                  <div class="author__chanel-text">Авторская передача «Мои прекрасные» </div>
                 </div>
               </div>
               <div class="author__chanel-item">
                 <img src="img/icons/chanel15.png" alt="">
+                <div class="author__chanel-info">
+                  <div class="author__chanel-text">Соведущий в программе «Женское счастье»</div>
+                </div>
               </div>
             </div>
             <div class="author__chanel-help">
@@ -1044,8 +1106,8 @@
           </div>
           <div class="prices__descr-mobile">
             <div class="prices__item-descr">
-              <p class="prices__item-text semibold">** Онлайн-чат «вопрос-ответ» с Павлом</p>
-              <p class="prices__item-text">На протяжении всего выступления Павел будет видеть ваш чат и комментарии, которые вы пишете. Таким образом, онлайн-тренинг пройдет более эффективно, и вы получите ответы на свои вопросы.</p>
+              <p class="prices__item-text semibold">* Бонусные рубли на ваш счет</p>
+              <p class="prices__item-text">Можете использовать при покупке на новый курс «Секреты Женского Счастья». Да и онлайн-тренинг получится бесплатным!</p>
             </div>
             <div class="prices__item-descr">
               <p class="prices__item-text semibold">** Онлайн-чат «вопрос-ответ» с Павлом</p>
@@ -1114,7 +1176,7 @@
             <div class="footer__contact contact">
               <p class="contact__text">Бесплатно по России</p>
               <a href="tel:8(800)333-77-80" class="contact__tel">8 (800) 333-77-80</a>
-              <div class="contact__link">Задать вопрос</div>
+              <a href="" class="contact__link">Задать вопрос</a>
             </div>
           </div>
         </div>

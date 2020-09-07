@@ -60,8 +60,8 @@ $(function() {
                 breakpoint: 900,
                 settings: {
                     swipe: true,
-                    prevArrow: '<div class="after__arrow-left"><img src="../img/icons/arrow-left.png"></div>',
-                    nextArrow: '<div class="after__arrow-right"><img src="../img/icons/arrow-right.png"></div>',
+                    prevArrow: '<div class="after__arrow-left"><img src="img/icons/arrow-left.png"></div>',
+                    nextArrow: '<div class="after__arrow-right"><img src="img/icons/arrow-right.png"></div>',
                 }
             }
         ]
@@ -159,6 +159,7 @@ $(function() {
             progressBar.addClass('end');
         }
 
+        updateBtnText(testCounter);
         updateProgressBar(testNumber);
         nextQuestion(testCounter);
     }
@@ -170,7 +171,7 @@ $(function() {
 
         var progressAllWidth = $('.test__progress').width();
         var progressBarWidth = (progressAllWidth / testNumber) * testCounter;
-        progressBar.width('100%');
+        progressBar.width(progressBarWidth);
     } 
 
     function nextQuestion(testCounter) {
@@ -187,12 +188,17 @@ $(function() {
         var bills = $('#test-result');
         $('#test').css({'display': 'none'});
 
-        if (testResult !== 0) {
-            bills.html((testResult - 1) + '-' + testResult + ' балла');
-        } else {
-            bills.html(testResult + '-' + (testResult + 1) + ' балл');
+        if (testResult === 0 || testResult === 1) {
+            bills.html('0-1 балл');
+            $('#test-result-text').html('Вам сложно влиять на мужчин и получать от них желаемое. Вы не чувствуете себя расслабленной рядом с ними, держите дистанцию. Поэтому мужчины боятся подойти к вам или подарить подарок.  Вам нужно развивать природные качества: нежность, мягкость, женственность.')
+        } else if (testResult === 2 || testResult === 3) {
+            bills.html('2-3 балла');
+            $('#test-result-text').html('У вас получается влиять на мужчин. Но иногда вы перебарщиваете с желанием все контролировать и манипулировать человеком. Есть множество способов, позволяющих влиять на своего избранника по-женски. И вы можете их успешно применять.');
+        } else if (testResult === 4 || testResult === 5) {
+            bills.html('4-5 балла');
+            $('#test-result-text').html('Вы умеете влиять на мужчин, чувствуете их потребности и желания, готовы мотивировать их на поступки, поддерживать и благодарить. Хотели бы еще больше прокачать свои навыки? Освоить тонкости общения с противоположным полом и получать от мужчин еще больше внимания, подарков, любви?');
         }
-        
+
         $('.test__final-content').css({'display': 'block'});
         $('.test__contact').css({'display': 'block'});
     }
@@ -203,6 +209,18 @@ $(function() {
             testCounter--;
             questionNumber.html(testCounter);
             updateProgressBar(testNumber);
+        }
+    }
+
+    function updateBtnText(testCounter) {
+        if (testCounter === 2) {
+            $('#yes-text').html('Часто');
+            $('#no-text').html('Редко');
+        } else if (testCounter === 3) {
+            $('#yes-text').html('Да');
+            $('#no-text').html('Не очень');
+        } else {
+            $('#no-text').html('Нет');
         }
     }
 
@@ -246,6 +264,12 @@ $(function() {
         $('body').addClass('popup-active');
     });
 
+    $('.contact__link').on('click', function(e) {
+        e.preventDefault();
+        $('.question-popup').addClass('show');
+        $('body').addClass('popup-active');
+    });
+
     /* **********************************************************************************************************
     Перекидывание элементов по DOM
     ********************************************************************************************************** */
@@ -257,25 +281,27 @@ $(function() {
     var doneBlocks = false;
     var doneBtn = false;
     var comeBackBtn = $('.header__thankyou-btn');
+    var buyBtn = $('.author__btn');
 
-    $(window).on('resize', function() {
+    $(window).on('load', function() {
         appendElements();
     });
-
+ 
     appendElements();
 
     function appendElements() {
-        if ($(this).width() < 1150 && doneBlocks === false) {
+        if ($(window).width() < 1150 && doneBlocks === false) {
             block4.appendTo('.program__content:nth-child(2)');
             block1.appendTo('.program__content:nth-child(1)');
             block1.css({'order': '1'});
             block2.css({'order': '2'});
-            block3.css({'order': '1'});
+            block3.css({'order': '1'}); 
             block4.css({'order': '2'});
-            block5.css({'order': '3'});
+            block5.css({'order': '3'}); 
             doneBlocks = true;
-        } else if ($(this).width() < 600 && doneBtn === false) {
+        } else if ($(window).width() < 600 && doneBtn === false) {
             comeBackBtn.appendTo('.header__content');
+            buyBtn.appendTo('.author__statistic');
             doneBtn = true;
         }
     }
