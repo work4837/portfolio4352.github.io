@@ -20,7 +20,7 @@ $(function() {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 2,
                     swipe: true,
@@ -74,15 +74,44 @@ $(function() {
         swipe: false,
         centerMode: true,
         prevArrow: '<div class="tap-area left-area"></div>',
-        nextArrow: '<div class="tap-area right-area"></div>'
+        nextArrow: '<div class="tap-area right-area"></div>',
+        responsive: [
+            {
+                breakpoint: 850,
+                settings: {
+                    dots: true,
+                    slidesToShow: 2,
+                    swipe: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    swipe: true,
+                    dots: true
+                }
+            }
+        ]
     });
 
-    // $('.girls__slider').slick({
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     swipe: false 
-    // });
-
+    $('.girls__slider').slick({
+        responsive: [
+            {
+                breakpoint: 3000,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    swipe: true,
+                    arrows: false,
+                    dots: true 
+                }  
+            }
+        ]
+    });
     
     /* **********************************************************************************************************
     Реализация тестов 
@@ -141,8 +170,8 @@ $(function() {
 
         var progressAllWidth = $('.test__progress').width();
         var progressBarWidth = (progressAllWidth / testNumber) * testCounter;
-        progressBar.width(progressBarWidth);
-    }
+        progressBar.width('100%');
+    } 
 
     function nextQuestion(testCounter) {
         $('#question-' + (testCounter - 1)).css({'display': 'none'});
@@ -182,5 +211,102 @@ $(function() {
         nextQuestion(testCounter);
     }
 
-    new WOW().init();
+    if ($(window).width() > 768) {
+        new WOW().init();
+    }
+
+    /* **********************************************************************************************************
+    Popup 
+    ********************************************************************************************************** */
+    var exitPopup = $('.popup__exit');
+    exitPopup.on('click', function() {
+        $('.popup').removeClass('show');
+        $('body').removeClass('popup-active');
+    });
+
+    var girlsInfoBtn = $('.girls__circle-info');
+    girlsInfoBtn.on('click', function() {
+        var id = $(this).attr('id');
+        $('.girl-popup-' + id).addClass('show');
+        $('body').addClass('popup-active');
+    });
+
+    $('.special-btn').on('click', function() {
+        $('.main-popup').addClass('show');
+        $('body').addClass('popup-active');
+    });
+
+    $('.main-popup__btn').on('click', function() {
+        $('.main-popup__btn').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.prices__btn').on('click', function() {
+        $('.main-popup').addClass('show');
+        $('body').addClass('popup-active');
+    });
+
+    /* **********************************************************************************************************
+    Перекидывание элементов по DOM
+    ********************************************************************************************************** */
+    var block1 = $('#program-block-1');
+    var block2 = $('#program-block-2');
+    var block3 = $('#program-block-3');
+    var block4 = $('#program-block-4');
+    var block5 = $('#program-block-5');
+    var doneBlocks = false;
+    var doneBtn = false;
+    var comeBackBtn = $('.header__thankyou-btn');
+
+    $(window).on('resize', function() {
+        appendElements();
+    });
+
+    appendElements();
+
+    function appendElements() {
+        if ($(this).width() < 1150 && doneBlocks === false) {
+            block4.appendTo('.program__content:nth-child(2)');
+            block1.appendTo('.program__content:nth-child(1)');
+            block1.css({'order': '1'});
+            block2.css({'order': '2'});
+            block3.css({'order': '1'});
+            block4.css({'order': '2'});
+            block5.css({'order': '3'});
+            doneBlocks = true;
+        } else if ($(this).width() < 600 && doneBtn === false) {
+            comeBackBtn.appendTo('.header__content');
+            doneBtn = true;
+        }
+    }
+
+    /* **********************************************************************************************************
+    Аккордеоны
+    ********************************************************************************************************** */
+    var accordeon = $('.prices__content-accordeon');
+    accordeon.on('click', function() {
+        $(this).closest('.prices__item').find('.prices__content-list').slideToggle();
+        $(this).toggleClass('active');
+        
+        if ($(this).hasClass('active')) {
+            $(this).html('Свернуть описание');
+        } else { 
+            $(this).html('Что входит в тариф?');
+        }
+    });
 });
+
+// переключение отзывов попап
+function nextComment(n) {
+    if (n !== 0) {
+        $('.girl-popup-' + (n - 1)).removeClass('show');
+        $('.girl-popup-' + n).addClass('show');
+    }
+}
+
+function prevComment(n) {
+    if (n !== 0) {
+        $('.girl-popup-' + (n + 1)).removeClass('show');
+        $('.girl-popup-' + n).addClass('show');
+    }
+}
