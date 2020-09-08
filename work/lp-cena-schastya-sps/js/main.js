@@ -90,7 +90,7 @@ $(function() {
                     slidesToShow: 1,
                     swipe: true,
                     dots: true,
-                    centerPadding: "25px"
+                    centerPadding: "20px"
                 }
             }
         ]
