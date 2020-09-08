@@ -89,7 +89,8 @@ $(function() {
                 settings: {
                     slidesToShow: 1,
                     swipe: true,
-                    dots: true
+                    dots: true,
+                    centerPadding: "25px"
                 }
             }
         ]
